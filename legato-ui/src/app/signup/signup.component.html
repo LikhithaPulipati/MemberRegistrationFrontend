@@ -1,0 +1,79 @@
+<!-- <h3>Edit your Book</h3> -->
+
+
+<form [formGroup]="credentialsForm" (ngSubmit)="signup()">
+<br />
+        <div class="col=xs-12">
+                Member ID: <input #memberid formControlName="memberid" type="number" placeholder="Enter Book Id" />
+        </div>
+        <br />
+        <div class="col=xs-12">
+                Name: <input #name formControlName="name" type="text" placeholder="Enter Name" />
+        </div>
+        <br />
+
+        <div class="col=xs-12">
+                Address: <input #address formControlName="address" type="text" placeholder="Enter Address" />
+        </div>
+        <br />
+        <div class="col=xs-12">
+                State: <input #state formControlName="state" type="text" placeholder="Upload State" />
+        </div>
+        <br />
+
+        <div class="col=xs-12">
+                Country: <input #country formControlName="country" type="text" placeholder="Enter Country" />
+        </div>
+        <br />
+        <div class="col=xs-12">
+                Email: <input #email formControlName="email" type="text" placeholder="Enter Email Id" />
+        </div>
+        <br />
+        <div class="col=xs-12">
+                Pan Number: <input #pan formControlName="pan" type="text" placeholder="Enter PAN Number" />
+        </div>
+        <br />
+
+        <div class="col=xs-12">
+               Contact No : <input #contact formControlName="contact" type="number" placeholder="Enter Contact Number" />
+        </div>
+        <br />
+        <div class="col=xs-12">
+            Date of Birth: <input #dob formControlName="dob" type="date"
+                        placeholder="Enter  Date of Birth" />
+        </div>
+        <br />
+
+        <div class="col=xs-12">
+                Password: <input #password formControlName="password" type="text" placeholder="Enter password" />
+        </div>
+        <br />
+        <div class="col=xs-12">
+            Dependent One: <input #dpOne formControlName="dpOne" type="text" placeholder="Enter Dependent Name" />
+    </div>
+    <br />
+    <div class="col=xs-12">
+        Dependent One Dob: <input #dpOneDob formControlName="dpOneDob" type="date" placeholder="Enter Dependent Dob" />
+</div>
+<br />
+<div class="col=xs-12">
+    Dependent Two: <input #dpTwo formControlName="dpTwo" type="text" placeholder="Enter Dependent Name" />
+</div>
+<br />
+<div class="col=xs-12">
+    Dependent Two Dob: <input #dpTwoDob formControlName="dpTwoDob" type="date" placeholder="Enter Dependent Dob" />
+</div>
+<br />
+        
+        <div class="col=xs-12">
+                <button type="submit" value="Register Member" class="btn btn-success " [disabled]="credentialsForm.invalid">
+                        Register Member</button>
+
+        </div>
+
+        <p *ngIf="credentialsForm.invalid">Fill up all fields properly</p>
+
+</form>
+
+
+<h4>{{message}}</h4>
